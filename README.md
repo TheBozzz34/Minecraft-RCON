@@ -20,23 +20,18 @@ npm install yamrc
 Usage Example
 
 ```javascript
-import { Rcon } from './path/to/rcon';
+const Rcon = require('yamrc').Rcon;
 
 // Initialize RCON connection
-const rcon = new Rcon('server_address', 25575, 'your_rcon_password');
+const rconClient = new Rcon('server_address', rcon_port, rcon_password);
 
-// Connect to the server
-rcon.connect()
-    .then(() => {
-        // Send commands after successful authentication
-        return rcon.send('list'); // Example command: 'list' to view online players
-    })
-    .then((response) => {
-        console.log('Server response:', response.payload); // Process the server response
-    })
-    .catch((err) => {
-        console.error('Error:', err); // Handle errors
-    });
+// Connect to the server and run the "list" command
+async function main() {
+    await rconClient.connect()
+    console.log(await rconClient.send('list'))
+    await rconClient.disconnect()
+}
+main()
 ```
 ## API Reference
 `Rcon(host: string, port: number, password: string)`
