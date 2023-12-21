@@ -37,9 +37,11 @@ export class Rcon {
             this.socket.on('data', (data) => {
                 const packet = this.read(data);
 
-                // Check if the packet is a response to a command we sent
-                // If so, resolve the promise with the response
-
+                if (packet.id === -1) {
+                    console.log('Authentication failed: Wrong password');
+                    reject('Authentication failed: Wrong password');
+                    return;
+                }
                 const callback = this.callbacks.get(packet.id);
                 if (callback) {
                     callback(packet);
@@ -104,9 +106,6 @@ export class Rcon {
                     console.log('Authentication successful');
                     this.authenticated = true;
                     resolve();
-                } else if (packet.id === -1) {
-                    console.log('Authentication failed: Wrong password');
-                    reject('Authentication failed: Wrong password');
                 } else {
                     console.log('Authentication failed: Unexpected response ID');
                     reject('Authentication failed: Unexpected response ID');

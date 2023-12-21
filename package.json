@@ -2,12 +2,11 @@
   "name": "minecraft-rcon",
   "version": "1.0.0",
   "description": "A simple RCON client for Minecraft servers",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/index.js"
   },
   "keywords": [],
   "author": "",
