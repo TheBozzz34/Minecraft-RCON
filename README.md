@@ -57,6 +57,12 @@ disconnect(): Promise<void>
 send(command: string): Promise<any>
     Sends a command to the RCON server.
     command: The command string to be sent.
+
+isAuthenticated()
+    Returns the auth status of the rcon connection
+
+isConnected()
+    Returns whether the socket is connected or not
 ```
 
 Notes
