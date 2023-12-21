@@ -1,18 +1,26 @@
 {
-  "name": "minecraft-rcon",
-  "version": "1.0.0",
-  "description": "A simple RCON client for Minecraft servers",
+  "name": "yamrc",
+  "version": "1.0.1",
+  "description": "Yet another Minecraft RCON client",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm run build",
     "build": "tsc",
     "test": "node test/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["rcon", "minecraft", "client", "server", "remote", "console", "protocol", "tcp", "udp", "socket", "network", "game", "gaming", "multiplayer", "online", "online gaming", "online multiplayer", "online game"],
+  "author": "Necrozma",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.10.5",
     "typescript": "^5.3.3"
+  },
+  "homepage": "https://necrozma.xyz",
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:TheBozzz34/minecraft-rcon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheBozzz34/minecraft-rcon/issues"
   }
 }
