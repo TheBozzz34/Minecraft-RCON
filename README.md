@@ -1,7 +1,8 @@
 # Yet another RCON (Remote Console) Connection Library
 
 The RCON protocol facilitates remote interaction with a server via its console interface. This Node.js library establishes a connection to an RCON server, authenticates using a password, and sends commands to the server.
-Installation
+
+## Installation
 
 To install the RCON library, follow these steps:
 
