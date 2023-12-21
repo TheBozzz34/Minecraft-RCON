@@ -90,6 +90,24 @@ export class Rcon {
         });
     }
 
+    /** 
+    * Returns the current connection status.
+    * @returns True if connected, false otherwise. 
+    */
+    public isConnected() {
+        return this.socket.writable;
+    }
+
+    /**
+     * Returns the current authentication status.
+     * @returns True if authenticated, false otherwise.
+     */
+    public isAuthenticated() {
+        return this.authenticated;
+    }
+
+
+
     // Private methods
 
     /**
