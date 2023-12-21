@@ -1,6 +1,6 @@
 {
   "name": "yamrc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Yet another Minecraft RCON client",
   "main": "lib/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "keywords": ["rcon", "minecraft", "client", "server", "remote", "console", "protocol", "tcp", "udp", "socket", "network", "game", "gaming", "multiplayer", "online", "online gaming", "online multiplayer", "online game"],
   "author": "Necrozma",
-  "license": "ISC",
+  "license": "AGPL-3.0",
   "devDependencies": {
     "@types/node": "^20.10.5",
     "typescript": "^5.3.3"
