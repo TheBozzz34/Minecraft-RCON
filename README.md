@@ -6,13 +6,7 @@ The RCON protocol facilitates remote interaction with a server via its console i
 
 To install the RCON library, follow these steps:
 
-Clone the Repository:
-
-```bash
-
-git clone https://github.com/TheBozzz34/minecraft-rcon.git
-```
-Install Dependencies:
+Install from NpmJS:
 
 ```bash
 npm install yamrc
