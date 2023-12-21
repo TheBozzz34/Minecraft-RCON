@@ -1,24 +1,64 @@
-# Yet another Minecraft Remote Console client
+# Yet another RCON (Remote Console) Connection Library
 
-Written in Typescript
+The RCON protocol facilitates remote interaction with a server via its console interface. This Node.js library establishes a connection to an RCON server, authenticates using a password, and sends commands to the server.
+Installation
 
-Example usage:
+To install the RCON library, follow these steps:
 
+Clone the Repository:
+
+```bash
+
+git clone https://github.com/TheBozzz34/minecraft-rcon.git
 ```
-const Rcon = require("../lib/index").Rcon;
+Install Dependencies:
 
-async function main() {
-    try {
-        const rconClient = new Rcon('10.0.0.150', 25575, 'test');
-        await rconClient.connect();
-        const response = await rconClient.send('list');
-        console.log(response);
-        await rconClient.disconnect();
-    } catch (err) {
-        console.error(err);
-    }
-}
-
-main();
-
+```bash
+npm install
 ```
+Usage Example
+
+```javascript
+import { Rcon } from './path/to/rcon';
+
+// Initialize RCON connection
+const rcon = new Rcon('server_address', 25575, 'your_rcon_password');
+
+// Connect to the server
+rcon.connect()
+    .then(() => {
+        // Send commands after successful authentication
+        return rcon.send('list'); // Example command: 'list' to view online players
+    })
+    .then((response) => {
+        console.log('Server response:', response.payload); // Process the server response
+    })
+    .catch((err) => {
+        console.error('Error:', err); // Handle errors
+    });
+```
+## API Reference
+`Rcon(host: string, port: number, password: string)`
+
+Parameters:
+- host: The host address of the RCON server.
+- port: The port number for the RCON connection.
+- password: The password required for RCON authentication.
+
+Methods
+```
+connect(): Promise<void>
+    Establishes a connection to the RCON server.
+
+disconnect(): Promise<void>
+    Closes the connection to the RCON server.
+
+send(command: string): Promise<any>
+    Sends a command to the RCON server.
+    command: The command string to be sent.
+```
+
+Notes
+- Ensure the server address, port, and RCON password are correctly provided.
+- This library uses promises for asynchronous operations.
+- Commands can be sent only after successful authentication.
