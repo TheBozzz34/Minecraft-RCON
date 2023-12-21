@@ -5,8 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "tsc",
-    "test": "node test/index.js"
+    "build": "tsc"
   },
   "keywords": ["rcon", "minecraft", "client", "server", "remote", "console", "protocol", "tcp", "udp", "socket", "network", "game", "gaming", "multiplayer", "online", "online gaming", "online multiplayer", "online game"],
   "author": "Necrozma",
