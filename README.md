@@ -17,7 +17,7 @@ Usage Example
 const Rcon = require('yamrc').Rcon;
 
 // Initialize RCON connection
-const rconClient = new Rcon('server_address', rcon_port, rcon_password);
+const rconClient = new Rcon('server_address', rcon_port, 'rcon_password');
 
 // Connect to the server and run the "list" command
 async function main() {
