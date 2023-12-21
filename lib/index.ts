@@ -107,6 +107,7 @@ export class Rcon {
                     this.authenticated = true;
                     resolve();
                 } else {
+                    // Need to fix this, will never happen
                     console.log('Authentication failed: Unexpected response ID');
                     reject('Authentication failed: Unexpected response ID');
                 }
