@@ -15,7 +15,7 @@ git clone https://github.com/TheBozzz34/minecraft-rcon.git
 Install Dependencies:
 
 ```bash
-npm install
+npm install yamrc
 ```
 Usage Example
 
